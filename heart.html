@@ -199,7 +199,7 @@ var ParticlePool = (function() {
 
   // creating the particle image using a dummy canvas
   var image = (function() {
-    var canvas  = document.createElement('canvas'),
+    var canvas  = tag('canvas'),
         context = canvas.getContext('2d');
     canvas.width  = settings.particles.size;
     canvas.height = settings.particles.size;

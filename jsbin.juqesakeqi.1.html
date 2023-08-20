@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://js.jirengu.com
+
+Copyright (c) 2023 by anonymous (//js.jirengu.com/juqesakeqi/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>饥人谷代码库jsbin</title>
+<style id="jsbin-css">
+.frankButton{
+  box-sizing:border-box;
+  display:inline-block;
+  background: none;
+  height:36px;
+  line-height:36px;
+  padding:0 16px;
+  text-decoration: none;
+  font-size:14px;
+  border:none;
+  transition:all 0.5s;
+  position: relative;
+  overflow:hidden;
+  background: green;
+  z-index:0;
+}
+.frankButton:hover{
+  background: #e5e5e5;
+}
+.frankButton:fucus{
+  outline:none;
+  background: #e5e5e5;
+}
+.frankButton >.circle{
+  position: absolute;
+  top:50%;
+  left:50%;
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  border:1px solid red;
+  margin-left:-5px;
+  margin-top:-5px;
+  background: red;;
+ transition:transform 0.5s;
+  visibility:hidden;
+  pointer-events:none;
+  z-index:-1;
+}
+.frankButton:hover >.circle.active{
+  transform:scale(10);
+  visibility:visible;
+}
+</style>
+</head>
+<body>
+<button id=b class="frankButton">按钮
+  <span class="circle"></span></button>
+<script id="jsbin-javascript">
+b.onclick = function(){
+  b.querySelector('.circle')
+  .classList.add('active')
+}
+b.querySelector('.circle').addEventListener('transitionend',
+                                           function(){
+  b.querySelector('.circle')
+   .classList.remove('active')
+
+})
+</script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://js.jirengu.com
+
+Copyright (c) 2023 by anonymous (//js.jirengu.com/pemenihuxu/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>饥人谷代码库jsbin</title>
+<style id="jsbin-css">
+*{
+  box-sizing:border-box;
+}
+.parent{
+  border:1px solid blue;
+  width:600px;
+}
+.logo{
+  width:80px;
+  height:36px;
+  background: #000;
+  float:left;
+}
+.text{
+  background: red;
+  float:right;
+}
+.title{
+  width:60px;
+  height:36px;
+  float:left;
+  border:1px solid black;
+}
+.clearfix:after{
+  content:'';
+  display:block;
+  clear:both;
+}
+</style>
+</head>
+<body>
+ <div class="parent clearfix">
+   <div class="logo"></div>
+   <div class="text clearfix">
+     <div class="title">1</div>
+     <div class="title">2</div>
+     <div class="title">3</div>
+   </div>
+ </div>
+</body>
+</html>

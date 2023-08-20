@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://js.jirengu.com
+
+Copyright (c) 2023 by anonymous (//js.jirengu.com/wucelosasu/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>饥人谷代码库jsbin</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+<style id="jsbin-css">
+*{box-sizing:border-box;}
+*{margin:0;padding:0;}
+.parent{
+  background: grey;
+  margin-left:auto
+}
+.child{
+
+}
+.child:nth-child(1){
+  width:100px;
+  background: #333;
+  color:white;
+  height:36px;
+  line-height:36px;
+  float:left;
+}
+.child:nth-child(2){
+  float:right;
+}
+
+@media (max-width:420px){
+  .parent .nav2{
+  display:block;
+}
+  .parent .nav{
+  display:none;
+}
+}
+.clearfix::after{
+  content:'';
+  display: block;
+  clear:both;
+}
+.content{
+
+  margin-right:10px;
+}
+.nav{
+  line-height:24px;
+  padding:6px 0;
+}
+.navItem{
+margin-left:20px;
+  float:left
+}
+.banner{
+  width:800px;
+  height:300px;
+  background: grey;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:10px;
+}
+@media (max-width:420px){
+ .banner{ width:auto;}
+}
+.pictures{
+  width:800px;
+  margin:0 auto;
+ overflow:hidden;
+
+}
+@media (max-width:420px){
+ .pictures{ width:auto;}
+}
+.pictures >.xxx{
+   display:flex;
+  flex-wrap:wrap;
+  margin:0 -4px;
+}
+.picture{
+  width:calc(25% - 8px);
+  height:194px;
+  background: #ddd;
+
+
+  margin:4px;
+  
+}
+@media (max-width:420px){
+.picture{
+  width:calc(50% - 8px);
+}
+}
+.art{
+  background: #ddd;
+  width:800px;
+  margin:0 auto;
+  display:flex;
+  justify-content:space-between;
+}
+@media (max-width:420px){
+.art{
+  width:auto;
+  flex-direction:column;
+}
+}
+.art>.sider{
+ border:1px solid black;
+ height:300px;
+ width:calc(33.333333% - 20px);
+
+}
+@media (max-width:420px){
+.art>.sider{
+ width:auto;
+  height:auto;
+
+}
+}
+.art>.main{
+
+  border:1px solid black;
+  width:66.666666%;
+  height:300px;
+}
+@media (max-width:420px){
+.art>.main{
+  width:auto;
+  height:auto;
+}
+}
+
+</style>
+</head>
+<body>
+<div class="parent clearfix" >
+  <div class="child" >logo
+  </div>
+  <div class="child" >
+    <div class="nav clearfix">
+     <div class="navItem">导航1</div>
+     <div class="navItem">导航2</div>
+     <div class="navItem">导航3</div>
+     <div class="navItem">导航4</div>
+     <div class="navItem">导航5</div>
+    </div>
+    <div class="nav2">三</div>
+  </div>
+</div>
+  <div class="banner"></div>
+  <div class="pictures ">
+    <div class="xxx">
+    <div class="picture"></div>
+    <div class="picture"></div>
+    <div class="picture"></div>
+    <div class="picture"></div>
+    <div class="picture"></div>
+    <div class="picture"></div>
+    <div class="picture"></div>
+  </div>
+</div>
+  <div class="art ">
+    <div class="sider">
+      广告1</div>
+    <div class="main">
+      广告2</div>
+  </div>
+</body>
+</html>

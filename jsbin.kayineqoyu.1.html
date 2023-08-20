@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://js.jirengu.com
+
+Copyright (c) 2023 by anonymous (//js.jirengu.com/kayineqoyu/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>饥人谷代码库jsbin</title>
+  <script src="http://at.alicdn.com/t/c/font_4206524_recvdcdx8qj.js"></script>
+  <style>
+  *{margin:0;padding:0;}
+  *{box-sizing:border-box;}
+  *::before,*::after{box-sizing:border-box;}
+    ul,ol{list-style:none}
+    .icon {
+      width: 1em; height: 1em;
+      vertical-align: -0.15em;
+      fill: currentColor;
+      overflow: hidden;
+    }
+   body{
+     height:100vh;
+     border:1px solid red;
+     display:flex;
+     justify-content:center;
+     align-items:center
+   }
+    .wrapper{
+      display:flex;
+      position: relative;
+    }
+    .suggestion{
+      position: absolute;
+      top:100%;
+      left:0;
+      display:none;
+    }
+    .sugggestion.active{
+      display:block;
+    }
+    .inputwrapper{
+      position:relative;
+      display:inline-block;
+    }
+    .floatDiv{
+      position:absolute;
+      right:0;
+      top:0;
+      height:100%;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      margin-right:10px;
+      color:#b8b8b8;
+    }
+     .floatDiv .splitLine{
+      width:0;height:16px;
+      border-left:1px solid;
+      margin:0 10px;
+    }
+    .inputwrapper{
+      float:left;
+    }
+    .inputwrapper + button{
+      float:left;
+    }
+    .inputwrapper + button{
+      background: #3988fb;
+      border:none;
+      font-size:14px;
+      color:white;
+      padding:0 20px;
+    }
+    .inputwrapper + button:focus{
+      outline:none;
+    }
+    .inputwrapper + button:hover{
+      box-shadow:1px 1px 1px 0 rgba(0,0,0.2);
+      background: #3781f0;
+    }
+    .inputwrapper input[type=text]{border:1px solid #b8b8b8;
+      width:540px;
+      height:35px;
+      line-height:35px;
+      padding-left:8px;
+      font-size:15px;
+    }
+    .inputwrapper input[type=text]:focus{
+      outline:none;
+      border-color:#4b94fc;
+    }
+    .inputwrapper svg.icon{
+      width:20px;height:20px;
+      fill:#b8b8b8;
+    }
+    .inputwrapper svg.icon:hover{
+      fill:#4b94fc;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+  <span class="inputwrapper">
+    <span class="floatDiv">
+      <svg class="icon">
+         <use xlink:href="#icon-mic">
+      </svg>
+  <span class="splitLine"></span>
+      <svg class="icon">
+         <use xlink:href="#icon-camera"></svg>
+  </span>
+     <input id="keyword" type="text" autocomplete="off">
+  </span>
+  <button>百度一下</button>
+  <ul id="suggestion" class="suggestion">
+    <li>选项1</li>
+    <li>选项2</li>
+    <li>选项3</li>
+    <li>选项4</li>
+  </ul>
+</div>
+<script id="jsbin-javascript">
+keyword.oninput = function(e){
+  if(keyword.value){
+    suggestion.classlist.add('active')
+  }else{
+    suggestion.classlist.remove('active')
+  }
+}
+</script>
+</body>
+</html>
