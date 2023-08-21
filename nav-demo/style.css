@@ -12,7 +12,7 @@ kbd:hover > button{
     display: inline-block;
 }
 body{
-    background: plum url(./wall.jpg) no-repeat center center;
+    background: silver; url(./wall.jpg) no-repeat center center;
     background-size: cover;
 }
 main{
